@@ -17,6 +17,10 @@ int swap(int *val1, int *val2)
 /*数组做函数参数会弱化为指针*/
 int printArray(int *array, int arraySize)
 {
+    if (array == NULL)
+    {
+        return;
+    }
     int ret = 0; 
     for (int idx = 0; idx < arraySize; idx++)
     {
@@ -27,6 +31,10 @@ int printArray(int *array, int arraySize)
 
 void bubbleSort(int *array, int length)
 {
+     if (array == NULL)
+    {
+        return;
+    }
     for (int end = length; end > 0; end--)
     {
         for (int begin = 1; begin < length; begin++)
@@ -43,6 +51,10 @@ void bubbleSort(int *array, int length)
 /*优化1*/
 void bubbleSort01(int *array, int length)
 {
+    if (array == NULL)
+    {
+        return;
+    }
     /*已经排好序的标志*/
     int sorted = 1;
     for (int end = length; end > 0; end--)
